@@ -1,0 +1,13 @@
+{
+  "pages":[    
+    "pages/start/start",
+    "pages/index/index",
+    "pages/logs/logs"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#D13844",
+    "navigationBarTitleText": "JD小程序",
+    "navigationBarTextStyle":"white"
+  }
+}

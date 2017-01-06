@@ -1,0 +1,37 @@
+<view class="container">
+    <swiper interval="3000" circular="true" autoplay="true" indicator-dots="true" class="banner">
+        <swiper-item wx:for="{{allDataList.banner}}" wx:for-item="item">
+            <image src="{{item.src}}"></image>
+        </swiper-item>
+    </swiper>
+    <!--工具栏-->
+    <view class="tool-bar">
+        <view class="tool-list" wx:for="{{allDataList.toolBarData.toolBarTop}}" wx:for-item="itemName">
+            <image src="{{itemName.src}}"></image>
+            <text>{{itemName.title}}</text>
+        </view>
+    </view>
+    <view class="tool-bar">
+        <view class="tool-list" wx:for="{{allDataList.toolBarData.toolBarBottom}}" wx:for-item="itemName">
+            <image src="{{itemName.src}}"></image>
+            <text>{{itemName.title}}</text>
+        </view>
+     </view>
+     <view class="seckill">
+        <text class="little">小程序秒杀 </text>
+        <text class="new-year">秒杀好货迎新年</text>
+     </view>
+     <scroll-view scroll-x="true">
+        <view style="width:11000%">
+            <block wx:for="{{allDataList.msGoods}}">
+            <view class="goods-list">
+                <image class="goods-img" src="{{item.src}}"></image>
+                <view class="price"><text class="price-rmb">￥</text>{{item.nowPrice}}</view>
+                <view class="old-price"><text class="price-rmb">￥</text>{{item.oldPrice}}</view>
+            </view>
+            </block>
+        </view>
+     </scroll-view>
+
+
+</view>
